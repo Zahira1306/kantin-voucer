@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Keamanan Sistem Informasi - NPM 24781049</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9; color: #333;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh; padding: 20px;
+        }
+        .container {
+            background: #ffffff; width: 100%; max-width: 650px;
+            padding: 30px; border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); text-align: center;
+        }
+        .header { border-bottom: 2px solid #eef2f5; padding-bottom: 20px; margin-bottom: 25px; }
+        .header h1 { font-size: 1.5rem; color: #1a252f; margin-bottom: 8px; }
+        .header p { font-size: 0.95rem; color: #6c757d; }
+        .badge {
+            display: inline-block; background-color: #e8f4fd; color: #0d6efd;
+            padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-top: 10px;
+        }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        @media (max-width: 500px) { .grid { grid-template-columns: 1fr; } }
+        .card {
+            border: 2px solid #e9ecef; border-radius: 10px; padding: 20px; text-align: left;
+            display: flex; flex-direction: column; justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06); }
+        .card-rentan { border-color: #f8d7da; background-color: #fff8f8; }
+        .card-aman { border-color: #d1e7dd; background-color: #f8fff9; }
+        .card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+        .card-rentan h3 { color: #842029; }
+        .card-aman h3 { color: #0f5132; }
+        .card p { font-size: 0.85rem; color: #555; line-height: 1.4; margin-bottom: 20px; }
+        .btn {
+            display: block; text-align: center; padding: 10px 15px; border-radius: 6px;
+            text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background-color 0.2s;
+        }
+        .btn-rentan { background-color: #dc3545; color: white; }
+        .btn-rentan:hover { background-color: #bb2d3b; }
+        .btn-aman { background-color: #198754; color: white; }
+        .btn-aman:hover { background-color: #157347; }
+        .footer { margin-top: 30px; font-size: 0.8rem; color: #adb5bd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Portal Implementasi Chatbot Kantin</h1>
+            <p>Praktikum Keamanan Sistem Informasi (P05/P06)</p>
+            <div class="badge">NPM: 24781049</div>
+        </div>
+
+        <p style="font-size: 0.9rem; color: #495057; margin-bottom: 15px;">
+            Pilih versi simulasi chatbot di bawah ini untuk pengujian audit keamanan:
+        </p>
+
+        <div class="grid">
+            <div class="card card-rentan">
+                <div>
+                    <h3>Versi Rentan</h3>
+                    <p>Simulasi serangan Prompt Injection langsung pada pembuatan kode diskon/voucher.</p>
+                </div>
+                <a href="24781049-kantin-voucher-rentan.html" class="btn btn-rentan">Buka Versi Rentan &rarr;</a>
+            </div>
+
+            <div class="card card-aman">
+                <div>
+                    <h3>Versi Aman</h3>
+                    <p>Dilengkapi validasi/filter deterministik di luar model & batasan hak akses (Least Privilege).</p>
+                </div>
+                <a href="24781049-kantin-voucher-aman.html" class="btn btn-aman">Buka Versi Aman &rarr;</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; Politeknik Negeri Lampung - Keamanan Sistem Informasi
+        </div>
+    </div>
+</body>
+</html>
